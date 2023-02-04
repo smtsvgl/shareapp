@@ -14,14 +14,14 @@ String getToken() => Platform.environment['TOKEN']!;
 // - translations for stores & f-droid
 
 void main() async {
-  /* await clearCurrentTranslations(); */
-  /* final id = await buildTranslations(); */
-  /* // const id = 48; */
-  /* await applyTranslationsArb(id); */
-  /**/
-  /* // running 'flutter clean' & 'flutter pub get' */
-  /* await Process.run('flutter', ['clean']); */
-  /* await Process.run('flutter', ['pub', 'get']); */
+  await clearCurrentTranslations(); 
+   final id = await buildTranslations(); 
+    const id = 48; 
+   await applyTranslationsArb(id); 
+  
+   // running 'flutter clean' & 'flutter pub get' 
+   await Process.run('flutter', ['clean']); 
+   await Process.run('flutter', ['pub', 'get']); 
 
   await updateLanguageConfig();
   await updateLanguageFlags();
